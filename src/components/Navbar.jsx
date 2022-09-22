@@ -15,11 +15,16 @@ const Navbar = () => (
       <ul className="nav__links">
         {links.map(({ name, path }, index) => (
           <li key={index}>
-            <NavLink to={path}>{name}</NavLink>
+            <NavLink
+              to={path}
+              className={({ isActive }) => (isActive ? "active-nav" : "")}
+            >
+              {name}
+            </NavLink>
           </li>
         ))}
       </ul>
-      <button className="nav__toggle_btn">
+      <button className="nav__toggle-btn">
         <GoThreeBars />
       </button>
     </div>

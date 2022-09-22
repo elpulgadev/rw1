@@ -1,35 +1,58 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
+nav {
+  display: grid; /* ? */
+  place-items: center; /* ? */
+  position: fixed;
+  left: 0; /* ? */
+  top: 0; /* ? */
+  z-index: 99;
+  width: 100vw; /* ? */
+  height: 5rem;
+  background-color: var(--color-primary);
 }
 
-:root {
-  --primary-hue: 210;
-  --gray-hue: 240;
-  --color-primary: hsl(var(--primary-hue), 100%, 50%);
-  --color-primary-variant: hsl(var(--primary-hue), 100%, 65%);
-  --color-secondary: #ffb116;
-  --color-gray-100: hsl(var(--gray-hue), 47%, 94%);
-  --color-gray-200: hsl(var(--gray-hue), 26%, 75%);
-  --color-gray-300: hsl(var(--gray-hue), 24%, 64%);
-  --color-gray-400: hsl(var(--gray-hue), 16%, 41%);
-  --color-gray-500: hsl(var(--gray-hue), 44%, 25%);
-  --color-gray-600: hsl(var(--gray-hue), 48%, 15%);
-
-  --container-width-lg: 80%;
-  --container-width-md: 90%;
-
-  --trasition: all 500ms ease;
+/* only shows on medium and small screens */
+.nav__toggole-btn {
+  display: none;
 }
 
-/* GENERAL STYLES */
-body {
-  font-family: "Montserrat", sans-serif;
+.nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+
+.logo {
+  width: 7rem;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.nav__links {
+  transition: var(--transition);
+}
+
+.nav__links a:hover {
+  color: var(--color-secondary);
+}
+
+.active-nav {
+  position: relative;
+}
+
+.active-nav:after {
+  position: absolute;
+  left: calc(50% - 0.6rem);
+  content: "";
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: red;
+  transform: rotate(45deg);
+  margin-top: 0.9rem;
 }
