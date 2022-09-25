@@ -63,7 +63,7 @@ nav {
     display: inline-block;
     background-color: transparent;
     font-size: 1.8rem;
-    cursor: poniter;
+    cursor: pointer;
   }
 
   .nav__toggle-btn svg {
