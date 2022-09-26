@@ -1,7 +1,7 @@
 nav {
   display: grid; /* ? */
   place-items: center;
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   top: 0;
   z-index: 99;
@@ -52,7 +52,7 @@ nav {
   display: block;
   width: 1.2rem;
   height: 1.2rem;
-  background-color: red;
+  background-color: var(--color-primary);
   transform: rotate(45deg);
   margin-top: 0.9rem;
 }
